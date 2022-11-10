@@ -1,3 +1,7 @@
+#path
+#/.vscode
+/build
+
 # Prerequisites
 *.d
 
@@ -30,3 +34,6 @@
 *.exe
 *.out
 *.app
+
+#?
+.DS_Store
