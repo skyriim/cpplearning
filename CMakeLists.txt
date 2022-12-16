@@ -11,11 +11,12 @@ include(CPack)
 enable_testing()
 set(CMAKE_BUILD_TYPE Debug)
 
-aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC_LIST)
-# list(APPEND SRC_LIST main.cpp) ?
+# aux_source_directory不会递归
+aux_source_directory(${PROJECT_SOURCE_DIR}/src_basic SRC_LIST)
+
+# list(APPEND SRC_LIST main.cpp)
 set(SRC_LIST main.cpp ${SRC_LIST} )
 
 #set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build)
 
-# 为什么在此环境只能叫main? launch.json配置的明明是无后缀文件 在哪里被替换了？
 add_executable(run ${SRC_LIST})

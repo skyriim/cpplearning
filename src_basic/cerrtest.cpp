@@ -8,9 +8,8 @@ void errprintclass::errprint()
     cerr << str << endl;
 }
 
-/*
+
 void errpirnt1(){
     char str[] = "error message!";
     cerr << str << endl;
 }
-*/
